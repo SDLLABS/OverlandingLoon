@@ -106,7 +106,8 @@ Para utilização em veículo: proteger a alimentação contra transientes, inve
 
 ## Créditos e licenças
 
-- Projeto original *Car Inclinometer*: **LazyDays Creation**, © 2026, licença **MIT**. Os avisos e a licença originais estão preservados em [`firmware/.../LICENSE.md`](firmware/car-inclinometer-xiao-baro-gnss/LICENSE.md).
+- Projeto original *Car Inclinometer*: **LazyDays Creation**, licença **MIT**. Os avisos e a licença originais estão preservados em [`firmware/.../LICENSE.md`](firmware/car-inclinometer-xiao-baro-gnss/LICENSE.md).
+- Evolução, GPS, Altimetro e TFT XIAO **SDL LABS**
 - Organização e documentação OverlandingLoon: **SDL LABS**.
 - O repositório contém uma licença [Apache License 2.0](LICENSE) na raiz; **a existência desta licença não elimina nem substitui as obrigações de atribuição MIT associadas ao trabalho de terceiros**.
 - Bibliotecas e hardware de terceiros seguem as respetivas licenças e documentação.

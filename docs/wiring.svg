@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="810" viewBox="0 0 1280 810" role="img" aria-labelledby="title desc">
+<title id="title">OverlandingLoon — ligações I2C do inclinómetro</title>
+<desc id="desc">XIAO ESP32-S3 com Round Display, MPU6050 e BMP390 por I2C, módulo GNSS u-blox M10 I2C opcional, alimentação 5V externa.</desc>
+<defs><style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#10283e} .title{font-size:32px;font-weight:700}
+.h{font-size:23px;font-weight:700} .t{font-size:17px} .sm{font-size:15px}
+.box{fill:#fff;stroke:#7293ac;stroke-width:2.5} .head{fill:#0c4268}
+.headtext{fill:white;font-size:21px;font-weight:700}
+</style></defs>
+<rect width="1280" height="810" fill="#f7fafc"/>
+<text x="40" y="53" class="title">OverlandingLoon · Diagrama de ligações — GNSS I²C</text>
+<text x="40" y="80" class="sm">Versão correspondente ao firmware atual · Seeed XIAO ESP32-S3 + Round Display 104030087</text>
+
+<rect x="40" y="104" width="1200" height="94" rx="14" class="box"/>
+<rect x="57" y="123" width="220" height="55" rx="10" fill="#e6edf3"/>
+<text x="167" y="145" text-anchor="middle" class="t">12 V (veículo)</text><text x="167" y="164" text-anchor="middle" class="sm">com fusível e proteção</text>
+<path d="M279 151 H325" stroke="#bc3b3b" stroke-width="5" fill="none"/><path d="M318 143 l12 8 -12 8" fill="#bc3b3b"/>
+<rect x="331" y="123" width="295" height="55" rx="10" fill="#fbeeda"/>
+<text x="479" y="145" text-anchor="middle" class="t">Conversor DC/DC automóvel</text><text x="479" y="165" text-anchor="middle" class="sm">Saída 5 V regulada</text>
+<path d="M626 151 H681" stroke="#bc3b3b" stroke-width="5" fill="none"/><path d="M675 143 l12 8 -12 8" fill="#bc3b3b"/>
+<rect x="689" y="123" width="512" height="55" rx="10" fill="#e5f3ff"/>
+<text x="945" y="145" text-anchor="middle" class="t">USB-C do XIAO / Round Display</text><text x="945" y="165" text-anchor="middle" class="sm">Nunca ligar 12 V diretamente ao módulo</text>
+
+<rect x="40" y="236" width="365" height="455" rx="18" class="box"/>
+<rect x="40" y="236" width="365" height="49" rx="18" class="head"/>
+<text x="222" y="267" text-anchor="middle" class="headtext">XIAO ESP32-S3</text>
+<text x="65" y="315" class="t">Round Display encaixado atrás</text>
+<text x="65" y="345" class="sm">LCD GC9A01 · 240 × 240 · SPI</text>
+<text x="65" y="370" class="sm">Toque CHSC6X · I²C</text>
+<rect x="67" y="400" width="312" height="194" rx="12" fill="#e9f3f9"/>
+<text x="90" y="435" class="h">Barramento I²C</text>
+<circle cx="95" cy="467" r="8" fill="#ca3b36"/><text x="115" y="474" class="t">3V3  — alimentação dos sensores</text>
+<circle cx="95" cy="500" r="8" fill="#293844"/><text x="115" y="507" class="t">GND — terra comum</text>
+<circle cx="95" cy="533" r="8" fill="#1775cc"/><text x="115" y="540" class="t">D4 / GPIO5 — SDA</text>
+<circle cx="95" cy="566" r="8" fill="#dc9411"/><text x="115" y="573" class="t">D5 / GPIO6 — SCL</text>
+<text x="65" y="630" class="sm">D6: retroiluminação · D7: toque</text>
+<text x="65" y="654" class="sm">Ambos reservados: NÃO usar GPS UART</text>
+
+<path d="M406 467 H560" stroke="#ca3b36" stroke-width="7" fill="none"/>
+<path d="M406 500 H560" stroke="#293844" stroke-width="7" fill="none"/>
+<path d="M406 533 H560" stroke="#1775cc" stroke-width="7" fill="none"/>
+<path d="M406 566 H560" stroke="#dc9411" stroke-width="7" fill="none"/>
+<rect x="555" y="279" width="185" height="382" rx="17" fill="#eaf3f8" stroke="#6b95b1" stroke-width="2.5"/>
+<text x="647" y="314" text-anchor="middle" class="h">I²C partilhado</text>
+<text x="647" y="339" text-anchor="middle" class="sm">Todos em paralelo</text>
+<text x="647" y="383" text-anchor="middle" class="t">3V3</text>
+<text x="647" y="408" text-anchor="middle" class="t">GND</text>
+<text x="647" y="433" text-anchor="middle" class="t">SDA</text>
+<text x="647" y="458" text-anchor="middle" class="t">SCL</text>
+<text x="647" y="503" text-anchor="middle" class="sm">Sem UART</text>
+<text x="647" y="528" text-anchor="middle" class="sm">para o GNSS</text>
+<text x="647" y="593" text-anchor="middle" class="sm">Pull-ups I²C</text>
+<text x="647" y="615" text-anchor="middle" class="sm">a verificar</text>
+
+<path d="M742 323 H775" stroke="#1775cc" stroke-width="5" fill="none"/>
+<path d="M742 494 H775" stroke="#1775cc" stroke-width="5" fill="none"/>
+<path d="M742 664 H775" stroke="#1775cc" stroke-width="5" fill="none"/>
+<rect x="775" y="236" width="465" height="171" rx="16" class="box"/>
+<rect x="775" y="236" width="465" height="46" rx="16" class="head"/>
+<text x="800" y="266" class="headtext">MPU6050 / GY-521</text>
+<text x="801" y="314" class="t">Acelerómetro e giroscópio</text>
+<text x="801" y="342" class="sm">3V3 → VCC  ·  GND → GND</text>
+<text x="801" y="366" class="sm">D4 → SDA  ·  D5 → SCL</text>
+<text x="801" y="390" class="sm">Endereço: 0x68</text>
+
+<rect x="775" y="425" width="465" height="171" rx="16" class="box"/>
+<rect x="775" y="425" width="465" height="46" rx="16" class="head"/>
+<text x="800" y="456" class="headtext">BMP390 / BMP388</text>
+<text x="801" y="504" class="t">Barómetro e altímetro estimado</text>
+<text x="801" y="532" class="sm">3V3 → VCC  ·  GND → GND</text>
+<text x="801" y="555" class="sm">D4 → SDA  ·  D5 → SCL</text>
+<text x="801" y="580" class="sm">Endereço: 0x77 (ou 0x76)</text>
+
+<rect x="775" y="615" width="465" height="171" rx="16" class="box"/>
+<rect x="775" y="615" width="465" height="46" rx="16" class="head"/>
+<text x="800" y="646" class="headtext">GNSS u-blox M10 I²C (opcional)</text>
+<text x="801" y="695" class="t">Altitude de referência e posicionamento</text>
+<text x="801" y="723" class="sm">3V3 → VCC*  ·  GND → GND</text>
+<text x="801" y="747" class="sm">D4 → SDA  ·  D5 → SCL</text>
+<text x="801" y="771" class="sm">Endereço: 0x42 · *Verificar placa GNSS</text>
+</svg>

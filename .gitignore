@@ -1,0 +1,23 @@
+# Arduino IDE / build outputs
+build/
+_build/
+*.bin
+*.elf
+*.map
+*.hex
+*.uf2
+*.o
+*.a
+*.d
+*.lst
+*.log
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+# Sensitive local files
+.env
+.env.*
+!.env.example

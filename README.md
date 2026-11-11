@@ -1,12 +1,10 @@
-<div align="center">
-  <img src="assets/branding/loon-overlanding-logo.png" alt="Loon Overlanding — SDL LABS" width="380">
+<p align="center"><img src="assets/branding/loon-overlanding-logo.png" alt="Loon Overlanding — SDL LABS" width="380"></p>
 
 # OverlandingLoon
 
 **Eletrónica embarcada, instrumentação e software para aventura e overlanding.**
 
 Projeto da **SDL LABS** · documentação em português (Portugal)
-</div>
 
 ---
 
